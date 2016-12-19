@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_query"
+        android:background="@color/colorBg_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="可根据下列选项查询:" />
+
+        <LinearLayout
+            android:id="@+id/ll_rd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdb_query_chepai"
+                    style="@style/main_tab_bottom"
+                    android:layout_height="40dp"
+                    android:background="@drawable/tab_button_bg"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="车牌号"
+                    android:textColor="#258ad1" />
+                <View
+                    android:layout_width="0.2dp"
+                    android:background="@color/gray"
+                    android:layout_height="match_parent"/>
+                <RadioButton
+                    android:id="@+id/rdb_query_chejia"
+                    style="@style/main_tab_bottom"
+                    android:layout_height="40dp"
+                    android:background="@drawable/tab_button_bg"
+                    android:gravity="center"
+                    android:text="车架号"
+                    android:textColor="#258ad1" />
+                <View
+                    android:layout_width="0.2dp"
+                    android:background="@color/gray"
+                    android:layout_height="match_parent"/>
+                <RadioButton
+                    android:id="@+id/rdb_query_fadongji"
+                    style="@style/main_tab_bottom"
+                    android:layout_height="40dp"
+                    android:background="@drawable/tab_button_bg"
+                    android:gravity="center"
+                    android:text="发动机号"
+                    android:textColor="#258ad1" />
+            </RadioGroup>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rel_tab_chepaihao"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/txv_query_carinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="车辆归属："
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_query_city2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/tab_btn_normal"
+                            android:text="苏"
+                            android:textColor="#258ad1"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_query_lin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:orientation="horizontal" >
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/edt_uqery_chepai"
+                                android:layout_width="fill_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginTop="10dp"
+                                android:maxLength="6"
+                                android:layout_weight="1"
+                                android:background="@drawable/tab_btn_normal"
+                                android:gravity="center_vertical"
+                                android:hint="车牌号："
+                                android:paddingLeft="20dp"
+                                android:paddingRight="0dp" >
+                            </EditText>
+                            </android.support.design.widget.TextInputLayout>
+                            <Spinner
+                                android:id="@+id/spi_query_paizhao"
+                                android:layout_width="80dp"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="9dp"
+                                android:background="@drawable/tab_btn_normal"
+                                android:gravity="center_horizontal" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/fl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <carlaw.bg.com.carlaw.view.wheelview.LoopView
+                    android:id="@+id/loopview"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/btn_query"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/exit_button_bg"
+                    android:text="查询"
+                    android:textColor="#FFFFFF" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

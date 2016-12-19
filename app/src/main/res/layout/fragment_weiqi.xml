@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:gravity="center_horizontal"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:text="1.请输入备注信息:"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+    <EditText
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:hint="在此输入备注信息"
+        android:gravity="top"
+        android:minLines="6"
+        android:textSize="14sp"
+        android:background="@color/white"
+        android:layout_height="wrap_content" />
+    android:visibility="visible" />
+    <LinearLayout
+        android:id="@+id/ll_weiqi"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:text="2.请输入限制检测数据:"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/exit_button_bg"
+            android:text="限制检测"
+            android:textColor="@color/white" />
+        <CheckBox
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:text="合格"
+            android:layout_height="35dp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="3.请依次拍摄驾驶证、行驶证、违法事实:"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
